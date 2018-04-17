@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
-// import ReactDOM from 'react-dom';
-import logo from './logo.svg';
-import './App.css';
-import Products from './Components/Products/Products';
-
-
+import { Header, Footer } from "./Components/Layouts";
+// import Products from "./Components/Layouts";
+import Products from './Components/Layouts/Products/Products';
 
 class App extends Component {
 constructor(){
@@ -39,15 +36,16 @@ componentDidMount(){
 
   render() {
     return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-              <Products AllProductData={ this.state }/> 
+        <div>
+          <Header />
+          <Products AllProductData={ this.state }/> 
+          <Footer />        
         </div>
     );
   }
 }
 
 export default App;
+
+
+

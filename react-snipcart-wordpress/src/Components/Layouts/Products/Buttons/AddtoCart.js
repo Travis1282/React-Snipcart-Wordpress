@@ -1,14 +1,15 @@
 import React from 'react';
-import CardActions from 'material-ui/Card';
-import FlatButton from 'material-ui/FlatButton';
+import Button from 'material-ui/Button';
 
- export default class Purchase extends React.Component {
+// import FlatButton from 'material-ui/FlatButton';
+
+
+ export default class AddtoCart extends React.Component {
 	render(){
-	 			const product = this.props.product;
+ 			const product = this.props.product;
 	 	return(
-		    <CardActions>
-	  		      <FlatButton
-	      	      	label="Purchase"
+	  		      <Button
+	      	      	label="Add to Cart"
 			      	type="button"
 			        className="snipcart-add-item"
 	                data-item-name={ product.name }
@@ -16,8 +17,8 @@ import FlatButton from 'material-ui/FlatButton';
 	                data-item-image={ product.link }
 	                data-item-url= { `${this.props.dataRoute}/${product.id}`}
 	                data-item-price={ product.price }>
-			      </FlatButton>
-		    </CardActions>
+	                Add to Cart
+			      </Button>
 		)
  }
 }
