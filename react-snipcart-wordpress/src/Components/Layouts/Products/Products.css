@@ -1,8 +1,9 @@
+
 .products{
+	flex-grow: 1;
 	padding: 20px;
 }
 
 .product{
-	width:200px;
-	padding: 20px;
+
 }
